@@ -13,13 +13,17 @@ SpineBoy = ig.Spine.extend({
 	animSheet: new ig.Asset("media/spineboy.json"),
 
 	init: function(x,y) {
+		this.parent();
+
 		this.pos.x = x;
 		this.pos.y = y;
-		this.parent();
+		this.stateData.setMixByName("walk", "jump", 0.2);
+		this.stateData.setMixByName("jump", "walk", 0.4);
+		this.state.setAnimationByName("walk", true);
 	},
 
 	update: function() {
-		this.pos.x += 150 * ig.system.tick;
+		this.pos.x += 200 * ig.system.tick;
 		if(this.pos.x > ig.system.width) this.pos.x = 0;
 		this.parent();
 	}

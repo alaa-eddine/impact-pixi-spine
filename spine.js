@@ -1,5 +1,5 @@
 // Spine support for ImpactPixi
-// v0.2
+// v0.2.1
 // Eemeli Kelokorpi
 ig.module(
 	'plugins.spine'
@@ -24,16 +24,10 @@ ig.Spine = ig.Class.extend({
 		spine.Bone.yDown = true;
 
 		this.skeleton = new spine.Skeleton(this.skeletonData);
-		this.skeleton.getRootBone().x = this.pos.x;
-		this.skeleton.getRootBone().y = this.pos.y;
 		this.skeleton.updateWorldTransform();
 
 		this.stateData = new spine.AnimationStateData(this.skeletonData);	
 		this.state = new spine.AnimationState(this.stateData);
-
-		this.stateData.setMixByName("walk", "jump", 0.2);
-		this.stateData.setMixByName("jump", "walk", 0.4);
-		this.state.setAnimationByName("walk", true);
 
 		this.container = new PIXI.DisplayObjectContainer();
 
