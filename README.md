@@ -2,6 +2,10 @@
 
 ImpactPixi: https://github.com/ekelokorpi/impact-pixi
 
+## Demo
+
+http://kelokorpi.com/impactpixi/spine/
+
 ## Usage
 
 	SpineBoy = ig.Spine.extend({
