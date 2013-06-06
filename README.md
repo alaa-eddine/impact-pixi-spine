@@ -1,8 +1,8 @@
-## Spine support for ImpactPixi
+# Spine support for ImpactPixi
 
 ImpactPixi: https://github.com/ekelokorpi/impact-pixi
 
-# Usage
+## Usage
 
 	SpineBoy = ig.Spine.extend({
 		pos: {x: 300, y: 600},
