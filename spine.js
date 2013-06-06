@@ -1,5 +1,5 @@
 // Spine support for ImpactPixi
-// v0.1
+// v0.2
 // Eemeli Kelokorpi
 ig.module(
 	'plugins.spine'
@@ -7,6 +7,7 @@ ig.module(
 .defines(function() {
 
 ig.Spine = ig.Class.extend({
+	pos: {x:0, y:0},
 	anim: null,
 	skeleton: null,
 	skeletonData: null,
@@ -47,6 +48,9 @@ ig.Spine = ig.Class.extend({
 	},
 
 	update: function() {
+		this.skeleton.getRootBone().x = this.pos.x;
+		this.skeleton.getRootBone().y = this.pos.y;
+
 		this.state.update(ig.system.tick);
 		this.state.apply(this.skeleton);
 		this.skeleton.updateWorldTransform();
