@@ -1,6 +1,6 @@
-// Spine support for ImpactPixi
+// ImpactPixiSpine
 // v0.2.1
-// Eemeli Kelokorpi
+// Eemeli Kelokorpi 2013
 ig.module(
 	'plugins.spine'
 )

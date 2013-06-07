@@ -1,4 +1,6 @@
-# Spine support for ImpactPixi
+# ImpactPixiSpine
+
+Spine support for ImpactPixi
 
 ImpactPixi: https://github.com/ekelokorpi/impact-pixi
 
@@ -10,7 +12,7 @@ http://kelokorpi.com/impactpixi/spine/
 
 Copy `spine.js` to your `lib/plugins/` folder and require `plugins.spine` on your game main module.
 
-## Usage
+## Example
 
 	SpineBoy = ig.Spine.extend({
 		pos: {x: 300, y: 600},
